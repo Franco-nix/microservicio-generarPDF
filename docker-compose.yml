@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: vales-db
+    enviroment:
+      POSTGRES_DB: vales_db
+      POSTGRES_USER: vales_user
+      POSTGRES_PASSWORD: vales_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - vales_data:/var/lib/postgresql/data 
+      - ./db/init:/docker-entrypoint-initdb.d
+
+volumes:
+  vales_data:

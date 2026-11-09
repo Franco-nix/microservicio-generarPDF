@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: vales-pdf-services
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/vales_db}
+    username: ${DB_USER:vales_user}
+    password: ${DB_PASSWORD:vales_pass}
