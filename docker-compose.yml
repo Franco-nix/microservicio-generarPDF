@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres:16-alpine
     container_name: vales-db
-    enviroment:
+    environment:
       POSTGRES_DB: vales_db
       POSTGRES_USER: vales_user
       POSTGRES_PASSWORD: vales_pass

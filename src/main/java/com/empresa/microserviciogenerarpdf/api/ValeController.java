@@ -1,6 +1,6 @@
 package com.empresa.microserviciogenerarpdf.api;
 
-import com.empresa.microserviciogenerarpdf.application.microserviciogenerarpdfervice;
+import com.empresa.microserviciogenerarpdf.application.ValeService;
 import com.empresa.microserviciogenerarpdf.domain.model.ArchivoPdf;
 import com.empresa.microserviciogenerarpdf.domain.model.EstadoVale;
 import com.empresa.microserviciogenerarpdf.domain.model.FiltroVale;

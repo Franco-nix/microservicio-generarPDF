@@ -5,12 +5,12 @@ import java.time.LocalDateTime;
 
 public record ValeDetalle(
         String codigoVale,
-        EstaadoVale estado,
+        EstadoVale estado,
         LocalDateTime fechaEmision,
         String zonal,
         String localidad,
         String proveedorRuc,
-        String preoveedorRazonSocial,
+        String proveedorRazonSocial,
         String nroContrato,
         String idSuministro,
         BigDecimal cantidadEmitida,

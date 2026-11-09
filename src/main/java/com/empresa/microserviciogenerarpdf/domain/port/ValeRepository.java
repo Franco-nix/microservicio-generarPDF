@@ -4,7 +4,7 @@ import com.empresa.microserviciogenerarpdf.domain.model.FiltroVale;
 import com.empresa.microserviciogenerarpdf.domain.model.ValeDetalle;
 import com.empresa.microserviciogenerarpdf.domain.model.ValeResumen;
 import java.util.List;
-import java.util.Optical;
+import java.util.Optional;
 
 public interface ValeRepository {
     List<ValeResumen> buscar(FiltroVale filtro);

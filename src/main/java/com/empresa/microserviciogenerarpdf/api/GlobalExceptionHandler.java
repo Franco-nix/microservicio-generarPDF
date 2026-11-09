@@ -1,7 +1,7 @@
 package com.empresa.microserviciogenerarpdf.api;
 
 import com.empresa.microserviciogenerarpdf.domain.exception.PdfGenerationException;
-import com.empresa.microserviciogenerarpdf.domain.exception.PdfGenerationException;
+import com.empresa.microserviciogenerarpdf.domain.exception.ValeNoEncontradoException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
     private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(ValeNoEncontradoException.class)
-    public ProblemDetail vale​NoEncontrado(ValeNoEncontradoException ex) {
+    public ProblemDetail valeNoEncontrado(ValeNoEncontradoException ex) {
         return ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
     }
 

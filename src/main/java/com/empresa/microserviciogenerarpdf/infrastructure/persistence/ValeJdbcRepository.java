@@ -69,7 +69,7 @@ public class ValeJdbcRepository implements ValeRepository {
     }
 
     @Override
-    public Optional<ValeDetalle> buccarDetallePorCodigo(String codigoVale) {
+    public Optional<ValeDetalle> buscarDetallePorCodigo(String codigoVale) {
         return jdbcClient.sql(SQL_DETALLE)
             .param("codigo", codigoVale)
             .query(ValeJdbcRepository::mapDetalle)
@@ -79,9 +79,9 @@ public class ValeJdbcRepository implements ValeRepository {
     public static ValeResumen mapResumen(ResultSet rs, int fila) throws SQLException {
         return new ValeResumen(
                 rs.getString("codigo_vale"),
-                rs.getObject("fecha_emision", LocalDateTime),
+                rs.getObject("fecha_emision", LocalDateTime.class),
                 rs.getString("trabajador"),
-                rs.getString("provedoor"),
+                rs.getString("proveedor"),
                 rs.getBigDecimal("cantidad_emitida"),
                 EstadoVale.fromCodigo(rs.getInt("estado_vale")));
     }

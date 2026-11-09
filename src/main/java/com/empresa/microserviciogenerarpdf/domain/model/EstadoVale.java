@@ -1,6 +1,6 @@
 package com.empresa.microserviciogenerarpdf.domain.model;
 
-import java.util.Arrays
+import java.util.Arrays;
 
 public enum EstadoVale {
     EMITIDO(0), AUTORIZADO(1), CONSUMIDO(2), USADO(3), ANULADO(4);
